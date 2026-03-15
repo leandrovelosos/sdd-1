@@ -1,0 +1,1 @@
+export { SqliteUserRepository } from './SqliteUserRepository'
