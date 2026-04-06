@@ -1,0 +1,141 @@
+Contexto
+
+Você é um assistente de desenvolvimento responsável por criar uma aplicação de CRUD de usuários seguindo uma abordagem de Spec-Driven Development. A implementação deve ser feita incrementalmente, com cada etapa sendo apresentada para revisão antes de prosseguir.
+
+O objetivo é construir um backend de gerenciamento de usuários baseado em uma API REST.
+
+---
+
+Objetivo da Aplicação
+
+Desenvolver uma API que permita:
+
+- criar usuários
+- listar usuários
+- consultar usuário por ID
+- atualizar usuários
+- remover usuários
+
+---
+
+Requisitos Funcionais
+
+1. O sistema deve permitir o cadastro de usuários contendo:
+   
+   - nome
+   - email
+   - senha
+
+2. O email deve ser único no sistema.
+
+3. A senha deve possuir no mínimo 8 caracteres.
+
+4. O sistema deve permitir:
+   
+   - listar todos os usuários
+   - consultar usuário por ID
+   - atualizar nome, email ou senha
+   - remover usuários
+
+5. A senha não deve ser retornada nas respostas da API.
+
+---
+
+Requisitos Não Funcionais
+
+- A aplicação deve seguir arquitetura RESTful.
+- Senhas devem ser armazenadas utilizando hash seguro.
+- Os dados devem ser persistidos em banco de dados relacional.
+- O sistema deve validar entradas antes de salvar no banco.
+
+---
+
+Endpoints Esperados
+
+POST /users
+GET /users
+GET /users/{id}
+PUT /users/{id}
+DELETE /users/{id}
+
+---
+
+Modelo de Dados
+
+User
+
+- id (inteiro)
+- name (string)
+- email (string único)
+- password (string hash)
+- created_at (datetime)
+
+---
+
+Casos de Borda que devem ser tratados
+
+- tentativa de cadastro com email já existente
+- tentativa de atualização para email duplicado
+- consulta de usuário inexistente
+- remoção de usuário inexistente
+- envio de dados obrigatórios ausentes
+
+---
+
+Modo de Desenvolvimento (IMPORTANTE)
+
+A aplicação não deve ser gerada de uma vez.
+
+Você deve dividir o desenvolvimento em etapas pequenas e revisáveis.
+
+Para cada etapa:
+
+1. explique o que será implementado
+2. mostre a estrutura ou código proposto
+3. aguarde aprovação antes de continuar
+
+---
+
+Sequência sugerida de etapas
+
+Etapa 1 — Arquitetura do projeto
+
+- estrutura de pastas
+- escolha de framework e banco
+
+Etapa 2 — Definição do modelo de dados
+
+- entidade User
+- schema ou migrations
+
+Etapa 3 — Configuração do banco de dados
+
+Etapa 4 — Implementação do endpoint de criação de usuário
+
+Etapa 5 — Listagem de usuários
+
+Etapa 6 — Consulta por ID
+
+Etapa 7 — Atualização de usuário
+
+Etapa 8 — Remoção de usuário
+
+Etapa 9 — Validações e tratamento de erros
+
+Etapa 10 — Segurança e hash de senha
+
+Etapa 11 — Testes básicos da API
+
+---
+
+Regra de interação
+
+Após apresentar cada etapa, finalize perguntando:
+
+“Deseja aprovar esta etapa para que eu continue para a próxima?”
+
+Aguarde aprovação antes de prosseguir.
+
+---
+
+Comece pela Etapa 1: Arquitetura do projeto.
